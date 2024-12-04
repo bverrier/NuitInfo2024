@@ -1,0 +1,16 @@
+body {
+    background-image: url("../img/img_connexion.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1,label {
+    color: var(--color-cr-text);
+}
+.login {
+    margin-top: 5% !important;
+    border: none;
+    border-left-color: currentcolor;
+    opacity: 0.90;
+    border-left: 20px solid var(--color-cr-primary-emphasis) !important;
+    border-radius: 0!important;
+}
