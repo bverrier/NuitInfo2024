@@ -12,7 +12,7 @@ class NavBar
   		'		<div class="container-fluid">'."\n".
    		'			<a class="navbar-brand text-white" href="./index.php?page=Accueil">'."\n".
       	'				<img src="img/cwassant.png" alt="Logo" width="30" height="24" class="d-inline-block text-center">'."\n".
-      	'					Croissant\'show'."\n".
+      	'					Nuit de L\'info 2024'."\n".
     	'			</a>'."\n".
 		'			<div class="navbar-brand text-white offset-1">'."\n".
 		'				<i class="fa-solid fa-user"></i>'."\n". $session->getUserLogin() . "\n".

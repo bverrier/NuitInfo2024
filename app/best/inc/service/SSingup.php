@@ -5,7 +5,6 @@ require_once __DIR__ . '/../../lib/croissantLib.php';
 require_once __DIR__ . '/../../inc/service/SAdmin.php';
 require_once __DIR__ . '/../../inc/controller/CAdmin.php';
 require_once __DIR__ . '/../../conf/config.php';
-require_once __DIR__ . '/../../inc/service/SCalendar.php';
 class SSingup
 {
 
@@ -19,7 +18,6 @@ class SSingup
      */
 	private Session $session;
     private SAdmin $SAdmin;
-    private SMercredi $Smercredi;
 	/**
 	 * @function  init construct model param
 	 */
@@ -28,7 +26,6 @@ class SSingup
 		$this->erros = new ErrorForm();
 		$this->session = $session;
         $this->SAdmin = new SAdmin($session);
-        $this->Smercredi = new SMercredi($session);
 	}
     // Function to check if the account status has changed
     function hasAccountStatusChanged($previousStatus, $newStatus) {

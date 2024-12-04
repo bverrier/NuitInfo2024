@@ -1,7 +1,4 @@
 <?php
-
-require_once __DIR__ . '/service/SMercredi.php';
-
 class Session
 {
 	private static $instance;
@@ -93,22 +90,16 @@ class Session
 			'is_admin' => ((!empty($post['isAdmin']) && $post['isAdmin']=='on') ? '1' : '\'0\''),
 			'is_activ' => ((!empty($post['activate']) && $post['activate']=='on') ? '1' : '\'0\'')
 		);
-		$mercredi = new SMercredi();
 		if (!empty($_POST['admin']) && $_POST['admin'] == 'addModifyForm') {
 			$wheres = array(
 				'id = '.$post['id']
 			);
 			$res = $db->update('users', $wheres, $tab);
-			$mercredi->updateAllWednesday($db, $tab, $post['id']);
 		} else {
 			$tab['mot_de_passe'] = '\'' . $db->escape(password_hash($post['mot_de_passe'], PASSWORD_DEFAULT)) . '\'';
 			$res = $db->insert('users', $tab);
 			$id = $db->getId();
-			$mercredi->updateAllWednesday($db, $tab, $id);
-			sendEmail($db,ADMINLOGIN,ADMINLOGIN,"Un utilisateur à créé son compte ".$post['email']);
 		}
-
-
 
 		// Prévoir envoie d'un mail pour une nouvelle inscription d'un utilisateur (voir avec le client);
 		return $res;

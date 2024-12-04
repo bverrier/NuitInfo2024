@@ -21,6 +21,6 @@ class SLogin
 			return true;
 		}
 		// Le login est le mdp sont obligatoires
-		throw new Exception('Le mdp et le login sont obligatoires');
+		throw new Exception('Le mot de passe et le login sont obligatoires');
 	}
 }

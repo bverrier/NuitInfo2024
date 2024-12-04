@@ -96,27 +96,3 @@ function isValidDate(String $date): bool
     // Check if the date is valid by ensuring it matches the input format and that it's a real date
     return $d && $d->format('Y-m-d') === $date;
 }
-
-/**
- * Envoi un message dans le service de messagerie
- * @param DatabaseMain $db
- * @param String $loginFrom
- * @param String $loginTo
- * @param String $msg
- * @return void
- */
-function sendEmail(DatabaseMain $db, String $loginFrom, String $loginTo, String $msg)
-{
-	$val = array(
-		"usr_to" => '\''.$db->escape($loginTo).'\'',
-		"usr_from" => '\''.$db->escape($loginFrom).'\'',
-		"msg" => '\''.$db->escape($msg).'\'',
-	);
-
-	$res = $db->insert('messagerie', $val);
-	if (!$res instanceof DatabaseResult) {
-		//var_dump('Erreur lors de l\'ajout du messsage dans la base de donneés');
-	}
-
-
-}

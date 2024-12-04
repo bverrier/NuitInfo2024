@@ -54,7 +54,7 @@ abstract class MainController
             $content = $this->getModal($db, $data, 'Ajouter '.$this->title, $this->title);
 			$content .= $this->display($db);
 		}
-		return $this->page->getDocument("CroissantShow-" . $this->title, $content, true);
+		return $this->page->getDocument("NuitInfo - " . $this->title, $content, true);
 	}
 
 	/**

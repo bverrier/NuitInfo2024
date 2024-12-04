@@ -34,9 +34,7 @@ require_once __DIR__.'/croissantLib.php';
 
             $html .= (!empty($_GET['page']) && $_GET['page'] == 'Admin') ? '<script src="./js/ajax/admin.js"></script>'."\n" : '';
             $html .= (!empty($_GET['page']) && $_GET['page'] == 'Accueil') ? '<script src="./js/ajax/accueil.js"></script>'."\n" : '';
-            $html .= (!empty($_GET['page']) && $_GET['page'] == 'Messagerie') ? '<script src="./js/ajax/messagerie.js"></script>'."\n" : '';
-
-            $html .= (!empty($_GET['page']) && $_GET['page'] == 'Holidays') ? '<script src="./js/ajax/holidays.js"></script>'."\n" : '';
+            $html .= (!empty($_GET['page']) && $_GET['page'] == 'Retro') ? '<script src="./js/ajax/retro.js"></script>'."\n" : '';
             $html .=
                 '		<title>'.strip_tags($title).'</title>'."\n".
                 '	</head>'."\n".

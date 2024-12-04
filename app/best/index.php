@@ -37,14 +37,10 @@ switch ($_GET['page']) {
 		require_once __DIR__ . '/inc/controller/CAdmin.php';
 		$controller = new CAdmin($session);
 		break;
-    case 'Holidays':
-        require_once __DIR__ . '/inc/controller/CHolidays.php';
-        $controller = new CHolidays($session);
+    case 'Retro' :
+        require_once __DIR__ . '/inc/controller/CRetro.php';
+        $controller = new CRetro($session);
         break;
-	case 'Messagerie':
-		require_once __DIR__ . '/inc/controller/CMessagerie.php';
-		$controller = new CMessagerie($session);
-		break;
 	default:
 		require_once __DIR__ . '/inc/Page.php';
 		$controller = new Page($session, 'Page Inexistante');
