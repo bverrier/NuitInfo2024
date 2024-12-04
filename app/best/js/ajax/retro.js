@@ -4,6 +4,13 @@ window.addEventListener("load",function (){
 });
 
 function loadRetroCSS() {
+    /*let styles = document.getElementsByTagName('link');
+    for (let i = 0; i < styles.length; i++) {
+        if (styles[i].rel === 'stylesheet') {
+            styles[i].parentNode.removeChild(styles[i]);
+        }
+    }*/
+
     let link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
