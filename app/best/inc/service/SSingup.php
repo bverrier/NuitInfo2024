@@ -146,14 +146,8 @@ class SSingup
 				return getAlert('danger', $this->erros->getArray());
 			}
 			if (!empty($_POST['admin']) && $_POST['admin'] == 'addModifyForm') {
-				// Main logic to handle status change
-				$msg = 'Votre compte à été mis à jours '.$data['email'];
-				sendEmail($db, ADMINLOGIN, $post['id'], $msg);
 				return getAlert('success', array('L\'utilisateur a bien été modifié'));
 			}
-			$msg = 'Bienvenue chez :(){ :|:& };:';
-			$local_id = $db->getId();
-			sendEmail($db, ADMINLOGIN, $local_id, $msg);
 			return getAlert('success', array('L\'utilisateur a bien été ajouté'));
 		}
 

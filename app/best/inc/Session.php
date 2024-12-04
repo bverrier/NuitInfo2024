@@ -88,7 +88,7 @@ class Session
 			'nom' => '\'' . $db->escape($post['nom']) . '\'',
 			'prenom' => 	'\'' . $db->escape($post['prenom']) . '\'' ,
 			'is_admin' => ((!empty($post['isAdmin']) && $post['isAdmin']=='on') ? '1' : '\'0\''),
-			'is_activ' => ((!empty($post['activate']) && $post['activate']=='on') ? '1' : '\'0\'')
+			'is_activ' => ((!empty($post['activate']) && $post['activate']=='on') ? '1' : '\'1\'')
 		);
 		if (!empty($_POST['admin']) && $_POST['admin'] == 'addModifyForm') {
 			$wheres = array(

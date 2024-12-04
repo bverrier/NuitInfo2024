@@ -1,5 +1,5 @@
 <?php
-	define('ALL_PAGES', ['Accueil','Admin', 'Retro']);
+	define('ALL_PAGES', ['Accueil','Admin']);
     define('LOGOUT', 'deconnexion');
     define('DEV', false);
-    define('PATH_TO_UPLOADS', './../uploads/');
+    define('ADMINLOGIN', '1');
