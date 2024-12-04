@@ -5,13 +5,13 @@ Le fichier Dockerfile permet de construire deux images basées sur l'image "alpi
 - mariadb est installé et configuré dans l'image nommée "alpine-mariadb".
 
 Le fichier compose.yaml gére 2 conteneurs :
-- apache-php_c : serveur apache, php et phpMyadmin (exécute l'image "alpine-apache-php8.3")
-- mariadb_c : serveur mariadb (exécute l'image "alpine-mariadb")
+- apache-php_nuitInfo : serveur apache, php et phpMyadmin (exécute l'image "alpine-apache-php8.3")
+- mariadb_nuitInfo : serveur mariadb (exécute l'image "alpine-mariadb")
 
 Les applications (scripts PHP) doivent être placés dans le répertoire app.
 
 Les tables de la base de données, et le contenu du répertoire app, sont persistants (grâce à l'utilisation de volumes).
-Les modifications du contenu du répertoire app sont donc prises en compte sans nécessité de redémarrer le conteneur apache-php_c.
+Les modifications du contenu du répertoire app sont donc prises en compte sans nécessité de redémarrer le conteneur apache-php_nuitInfo.
 
 Accès aux applications :
 http://localhost:8080
@@ -25,10 +25,11 @@ Nom d'hôte du serveur mariadb : mariadb-hostname
 # Arborescence
     |
     |__app                  # ajouter vos applications PHP ici
-    |   |__rapc
-    |        |__index.php
-    |        |__php
-    |        |__...
+    |   |__best
+    |        |__inc
+    |           |__controller
+    |           |__model
+    |           |__service
     |
     |__Dockerfile
     |
