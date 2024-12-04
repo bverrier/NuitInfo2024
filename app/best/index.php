@@ -1,8 +1,5 @@
 <?php
 
-//import lib
-use controller\CHolidays;
-
 require_once __DIR__ . '/lib/croissantLib.php';
 require_once __DIR__ . '/inc/Database.php';
 require_once __DIR__ . '/inc/Session.php';

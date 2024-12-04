@@ -1,43 +1,37 @@
-.card-body {
-    font-family: 'Press Start 2P', sans-serif;
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #121212;
     color: #fff;
-    margin: 0;
-    text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
 
-/* Titre principal dans .card-body */
-.card-body h1 {
+h1 {
     font-size: 3rem;
     color: #ffcc00;
     text-shadow: 2px 2px 4px #000000;
 }
 
-/* Sous-titres dans .card-body */
-.card-body h2 {
+pah2 {
     font-size: 2rem;
     color: #ffcc00;
 }
 
-/* Liste des faits rétro dans .card-body */
-.card-body ul {
+ul {
     list-style-type: none;
     padding-left: 0;
     font-size: 1.2rem;
 }
 
-.card-body ul li {
+ul li {
     margin-bottom: 10px;
 }
 
-/* Section des images dans .card-body */
-.card-body .retro-images {
+.retro-images {
     margin-top: 30px;
 }
 
-.card-body .retro-images img {
+.retro-images img {
     width: 200px;
     height: auto;
     margin: 10px;
@@ -45,9 +39,27 @@
     border-radius: 10px;
 }
 
-/* Effet hover sur les images */
-.card-body .retro-images img:hover {
+.retro-images img:hover {
     transform: scale(1.1);
     transition: transform 0.2s;
+}
+
+.btn-retro {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    border: 3px solid #ff00ff;
+    border-radius: 0;
+    text-shadow: 2px 2px #ff00ff;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-retro:hover {
+    color: #000;
+    background-color: #ff00ff;
+    text-shadow: 2px 2px #000;
+    border-color: #000;
 }
 

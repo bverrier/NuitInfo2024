@@ -1,31 +1,21 @@
 window.addEventListener("load",function (){
-    loadRetroCSS();
-    hideAddButton();
+   addEvent();
 });
 
-function loadRetroCSS() {
-    /*let styles = document.getElementsByTagName('link');
-    for (let i = 0; i < styles.length; i++) {
-        if (styles[i].rel === 'stylesheet') {
-            styles[i].parentNode.removeChild(styles[i]);
-        }
-    }*/
-
-    let link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'css/retro.css';
-    document.head.appendChild(link);
-}
-
-function hideAddButton() {
-    let addButton = document.getElementById('addButton');
-    if (addButton) {
-        addButton.style.display = 'none';  // Cache le bouton
-    }
-    let entete = document.getElementsByTagName('h1')[0];
-    if (entete) {
-        entete.style.display = 'none';  // Cache le titre
+function addEvent(){
+    //ajout un event sur le bouton btn-success
+    let btnSend = document.getElementById("sendRetro");
+    if (btnSend !== null){
+        btnSend.addEventListener("click",function (){
+            redirection();
+        },false);
     }
 }
+
+function redirection(){
+    console.log("test");
+    //redirection vers la page retro.php
+    window.location.replace("index.php?page=Accueil");
+}
+
 

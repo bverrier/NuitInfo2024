@@ -25,7 +25,7 @@ class CRetro extends MainController
         return ''; // Pas de canvas nécessaire
     }
 
-    protected function display(Database $db): string
+    public function display(Database $db): string
     {
         // Récupération des faits sur le rétro gaming depuis le service
         $facts = $this->sRetro->getRetroGamingFacts();
@@ -33,6 +33,7 @@ class CRetro extends MainController
         // Construction du contenu HTML en utilisant les faits dynamiquement
         $content = "
             <div class='retro-container'>
+                <button id='sendRetro' class='btn btn-retro' type='button' name='Back'>⬅️ Retour</button>
                 <h1>Le Rétro Gaming</h1>
                 <p>Le rétro gaming fait référence à la pratique de jouer à des jeux vidéo anciens, souvent sur des consoles d'époque ou des émulateurs.</p>
                 <h2>Faits intéressants :</h2>

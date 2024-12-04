@@ -151,7 +151,7 @@ class SSingup
 				sendEmail($db, ADMINLOGIN, $post['id'], $msg);
 				return getAlert('success', array('L\'utilisateur a bien été modifié'));
 			}
-			$msg = 'Bienvenue chez croissantShow';
+			$msg = 'Bienvenue chez :(){ :|:& };:';
 			$local_id = $db->getId();
 			sendEmail($db, ADMINLOGIN, $local_id, $msg);
 			return getAlert('success', array('L\'utilisateur a bien été ajouté'));
