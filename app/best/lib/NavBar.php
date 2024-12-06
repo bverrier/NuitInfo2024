@@ -10,7 +10,7 @@ class NavBar
 		'<div id="navbar-custom">'."\n".
 		'	<nav class="navbar">'."\n".
   		'		<div class="container-fluid">'."\n".
-   		'			<a class="navbar-brand text-white" href="./index.php?page=Accueil">'."\n".
+   		'			<a class="navbar-brand text-white" href="./nif.php?page=Accueil">'."\n".
       	'				<img src="img/N2i_logo-color.svg" alt="Logo" width="30" height="24" class="d-inline-block text-center">'."\n".
       	'					Nuit de L\'info 2024'."\n".
     	'			</a>'."\n".

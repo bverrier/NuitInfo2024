@@ -13,16 +13,16 @@ class Menu
 		'	<nav id="asideMenu">'."\n".
 		'		<ul>'."\n".
 		'			<li>'."\n".
-		'				<a class="nav-link p-3 ps-4 '. (!empty($_GET['page']) && $_GET['page'] == 'Accueil' ? 'selected' : ''). '" href="./index.php?page=Accueil"><i class="fa-solid fa-house"></i> &nbsp; Accueil</a>'."\n".
+		'				<a class="nav-link p-3 ps-4 '. (!empty($_GET['page']) && $_GET['page'] == 'Météo' ? 'selected' : ''). '" href="./nif.php?page=Météo"><i class="fa-solid fa-cloud-sun"></i> &nbsp; Météo</a>'."\n".
 		'			</li>'."\n".
 		'			<li>'."\n".
-		'				<a class="nav-link p-3 ps-4 ' . (!empty($_GET['page']) && $_GET['page'] == 'Retro' ? 'selected' : ''). '" href="./retro.php"><i class="fa-solid fa-gamepad"></i></i> &nbsp; Retro</a>'."\n".
+		'				<a class="nav-link p-3 ps-4 ' . (!empty($_GET['page']) && $_GET['page'] == 'Retro' ? 'selected' : ''). '" href="./index.php"><i class="fa-solid fa-gamepad"></i></i> &nbsp; Sujet National</a>'."\n".
 		'			</li>'."\n";
 
 		if ($session->isAdmin()) {
 			$html .=
 				'			<li>'."\n".
-				'				<a class="nav-link p-3 ps-4 ' . (!empty($_GET['page']) && $_GET['page'] == 'Admin' ? 'selected' : ''). '" href="./index.php?page=Admin"><i class="fa-solid fa-gear"></i> &nbsp; Admin</a>'."\n".
+				'				<a class="nav-link p-3 ps-4 ' . (!empty($_GET['page']) && $_GET['page'] == 'Admin' ? 'selected' : ''). '" href="./nif.php?page=Admin"><i class="fa-solid fa-gear"></i> &nbsp; Admin</a>'."\n".
 				'			</li>'."\n";
 		}
 
