@@ -24,8 +24,8 @@ try {
     // Si le login + mdp est correct, on fait une redirection version le compte de l’utilisateur
     if ($res) {
         // Redirection vers index.php
-		$_GET['page'] == 'Accueil';
-        header('Location:index.php?page=Accueil');
+		$_GET['page'] == 'Météo';
+        header('Location:nif.php?page=Météo');
     }
 } catch (Exception $e) {
     echo
