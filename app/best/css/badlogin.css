@@ -1,0 +1,185 @@
+/* Fond de la page avec un mouvement aléatoire */
+body {
+    background-image: url("../img/img_connexion.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: backgroundMove 5s infinite linear, randomZoom 3s infinite alternate; /* Déplacement + zoom aléatoire */
+}
+
+/* Titres et labels */
+h1, label {
+    color: var(--color-cr-text);
+    animation: blinkText 1s infinite, shakeText 0.8s infinite, randomRotate 3s infinite ease-in-out; /* Mélange de clignotement, secousse et rotation */
+}
+
+/* Conteneur de connexion avec animations complexes */
+.login {
+    margin-top: 5% !important;
+    border: none;
+    border-left-color: currentcolor;
+    opacity: 0.90;
+    border-left: 20px solid var(--color-cr-primary-emphasis) !important;
+    border-radius: 0 !important;
+    position: relative;
+    animation: moveBox 2s ease-in-out infinite, spinBox 4s linear infinite, randomMove 3s infinite alternate; /* Déplacement erratique, rotation et mouvement aléatoire */
+}
+
+/* Champs de formulaire */
+input[type="text"], input[type="password"], button {
+    animation: blinkElement 1.5s infinite alternate, randomSkew 2s infinite ease-in-out; /* Clignotement et déformation aléatoire */
+}
+
+/* Liens */
+a {
+    color: #ff0000;
+    text-decoration: none;
+    animation: hoverEffect 2s infinite, randomScale 3s infinite alternate; /* Effet sur les liens avec échelle aléatoire */
+}
+
+/* Keyframes */
+
+/* Déplacement du fond */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Zoom aléatoire sur le fond */
+@keyframes randomZoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Rotation aléatoire */
+@keyframes randomRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Déplacement erratique */
+@keyframes randomMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(-15px, 15px);
+    }
+    75% {
+        transform: translate(5px, -20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Déformation aléatoire */
+@keyframes randomSkew {
+    0%, 100% {
+        transform: skew(0deg, 0deg);
+    }
+    50% {
+        transform: skew(10deg, -5deg);
+    }
+}
+
+/* Échelle aléatoire */
+@keyframes randomScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Clignotement des champs */
+@keyframes blinkElement {
+    0% {
+        background-color: #ff00ff;
+    }
+    50% {
+        background-color: #ffff00;
+    }
+    100% {
+        background-color: #ff0000;
+    }
+}
+
+/* Clignotement du texte */
+@keyframes blinkText {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Secousse du texte */
+@keyframes shakeText {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Rotation continue */
+@keyframes spinBox {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Effet de survol sur les liens */
+@keyframes hoverEffect {
+    0% {
+        text-decoration: underline;
+    }
+    50% {
+        text-decoration: none;
+    }
+    100% {
+        text-decoration: underline;
+    }
+}

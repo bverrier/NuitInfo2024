@@ -20,8 +20,7 @@ class MAdmin
 				'prenom, '.
 				'is_admin, '.
 				'is_activ, '.
-				'date_creation_compte, '.
-				'croissant_buy '.
+				'date_creation_compte '.
 				'FROM users';
 		return $db->query($sql);
 
@@ -38,7 +37,6 @@ class MAdmin
 				'is_admin, '.
 				'is_activ, '.
 				'date_creation_compte, '.
-				'croissant_buy '.
             'FROM users '.
             'WHERE id = '. htmlsecure($id);
         return $db->query($sql);

@@ -31,7 +31,7 @@ class SAdmin
 		if ($this->session->sessionIsValid() && $this->session->isAdmin()) {
 			$res = $this->model->getAllUsers($db);
 			if (!$res instanceof DatabaseResult) {
-				throw new Exception("Erreur de la base de données");
+				throw new Exception("Erreur de la base de données all");
 			}
 			return $res->toList();
 		}

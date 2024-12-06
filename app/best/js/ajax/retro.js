@@ -15,7 +15,7 @@ function addEvent(){
 function redirection(){
     console.log("test");
     //redirection vers la page retro.php
-    window.location.replace("index.php?page=Accueil");
+    window.location.replace("login.php");
 }
 
 

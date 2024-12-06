@@ -41,7 +41,6 @@ class CAdmin extends MainController
             '                <th>Date de création du compte</th>'."\n".
             '                <th class="text-center">Admin</th>'."\n".
             '                <th class="text-center">Activé</th>'."\n".
-            '                <th class="text-center">Croissants achetés</th>'."\n".
             '                <th>Actions</th>'."\n".
             '            </tr>'."\n".
             '        </thead>'."\n".
@@ -59,8 +58,7 @@ class CAdmin extends MainController
             '                <td>' . htmlsecure($user['mail']) . '</td>'."\n".
             '                <td>' . htmlsecure($user['date_creation_compte']) . '</td>'."\n".
             '                <td class="text-center"><i class="fa-solid ' .($user['is_admin'] ? 'fa-check text-success':'fa-close') . '"></i></td>'."\n".
-            '                <td class="text-center"><i class="fa-solid ' .($user['is_activ'] ? 'fa-check text-success':'fa-close') . '"></i></td>'."\n".
-            '                <td class="text-center">' . htmlsecure($user['croissant_buy']) . '</td>' ."\n";
+            '                <td class="text-center"><i class="fa-solid ' .($user['is_activ'] ? 'fa-check text-success':'fa-close') . '"></i></td>'."\n";
 
             $html .=
                 '                <td>' ."\n".

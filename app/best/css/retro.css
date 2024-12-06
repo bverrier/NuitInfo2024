@@ -4,62 +4,415 @@ body {
     background-color: #121212;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
+    background-size: 200px 200px;
+}
+
+#page {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
     font-size: 3rem;
-    color: #ffcc00;
-    text-shadow: 2px 2px 4px #000000;
+    color: #00ffcc;
+    text-shadow: 0px 0px 15px rgba(0, 255, 204, 0.8);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 2rem;
-    color: #ffcc00;
+    color: #00ffcc;
+    text-shadow: 0px 0px 8px rgba(0, 255, 204, 0.7);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 ul {
     list-style-type: none;
     padding-left: 0;
     font-size: 1.2rem;
+    font-family: 'Press Start 2P', cursive;
 }
 
 ul li {
     margin-bottom: 10px;
+    border-bottom: 2px dashed #00ffcc;
+    padding-bottom: 8px;
 }
 
 .retro-images {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.audio-container figure {
+    margin: 0;
+    text-align: center;
+}
+
+.audio-container figcaption {
+    color: #00ffcc;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+audio {
+    margin-top: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.video-container figure {
+    margin: 0;
+    text-align: center;
+}
+
+.video-container figcaption {
+    color: #00ffcc;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+video {
+    margin-top: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+    width: 300px;
+}
+
+.retro-container {
+    background: #2c3e50;
+    background: -webkit-linear-gradient(180deg, #2c3e50 0%, #190e73 100%);
+    background: linear-gradient(180deg, #2c3e50 0%, #190e73 100%);
+    box-shadow: 0 0 20px rgba(102, 48, 144, 0.8), 0 0 30px rgba(102, 48, 144, 0.6), 0 0 40px rgba(184, 42, 205, 0.8);
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-shadow: 0px 0px 15px rgba(102, 48, 144, 0.9), 0px 0px 25px rgba(184, 42, 205, 0.8);
 }
 
 .retro-images img {
     width: 200px;
     height: auto;
     margin: 10px;
-    border: 5px solid #ffcc00;
+    border: 5px solid #00ffcc;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
 }
 
 .retro-images img:hover {
     transform: scale(1.1);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out;
+    filter: brightness(1.2);
 }
 
 .btn-retro {
+    display: block;
+    width: 200px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
-    background-color: #000;
-    border: 3px solid #ff00ff;
-    border-radius: 0;
-    text-shadow: 2px 2px #ff00ff;
-    padding: 10px 20px;
-    transition: all 0.2s ease-in-out;
+    background-color: #2c3e50;
+    border: 2px solid #16a085;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(22, 160, 133, 0.8);
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    white-space: nowrap;
 }
 
 .btn-retro:hover {
-    color: #000;
-    background-color: #ff00ff;
-    text-shadow: 2px 2px #000;
-    border-color: #000;
+    background-color: #16a085;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(22, 160, 133, 1);
 }
 
+.btn-retro:active {
+    background-color: #1abc9c;
+    transform: scale(0.98);
+}
+
+.btn-retro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, #00ffcc, #008080, #ffcc00);
+    animation: neonGlow 1.5s ease-in-out infinite;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+    25% {
+        box-shadow: 0 0 5px #16a085, 0 0 10px #16a085, 0 0 15px #16a085;
+    }
+    50% {
+        box-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+    }
+    75% {
+        box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c;
+    }
+    100% {
+        box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+}
+
+.highlight .info-box {
+    display: none;
+    position: absolute;
+    top: -70px;
+    left: 170px;
+    width: 300px;
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    z-index: 1000;
+    box-shadow: 0 0 5px #00ffcc;
+    animation: neonGlow 2s ease-in-out infinite;
+}
+
+.highlight:hover .info-box {
+    display: block;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.retro-footer {
+    background-color: #2c3e50;
+    text-align: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    padding: 20px;
+}
+
+.retro-footer figure {
+    margin: 20px 0;
+}
+
+.retro-footer figcaption {
+    font-size: 1.2rem;
+    color: #00ffcc;
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.8);
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.retro-footer audio {
+    margin-top: 10px;
+    border: 3px solid #16a085;
+    border-radius: 10px;
+    background-color: #333;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(22, 160, 133, 0.8);
+}
+
+.retro-footer audio:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.retro-footer .btn-retro {
+    display: inline-block;
+    width: 200px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #fff;
+    background-color: #2c3e50;
+    border: 2px solid #16a085;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(22, 160, 133, 0.8);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.retro-footer .btn-retro:hover {
+    background-color: #16a085;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(22, 160, 133, 1);
+}
+
+.retro-footer .btn-retro:active {
+    background-color: #1abc9c;
+    transform: scale(0.98);
+}
+
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+    25% {
+        box-shadow: 0 0 5px #16a085, 0 0 10px #16a085, 0 0 15px #16a085;
+    }
+    50% {
+        box-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+    }
+    75% {
+        box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c;
+    }
+    100% {
+        box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+}
+
+.retro-footer .btn-retro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, #00ffcc, #008080, #ffcc00);
+    animation: neonGlow 1.5s ease-in-out infinite;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+    .retro-footer {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .retro-footer {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .retro-footer audio {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .retro-footer {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .retro-footer audio {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .retro-images img {
+        width: 150px;
+    }
+
+    .btn-retro {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        font-size: 1rem;
+    }
+
+    .retro-images img {
+        width: 120px;
+    }
+
+    .btn-retro {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .highlight .info-box {
+        left: 0;
+        top: 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    ul {
+        font-size: 0.9rem;
+    }
+
+    .retro-images img {
+        width: 100px;
+    }
+
+    .btn-retro {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .highlight .info-box {
+        top: 30px;
+        width: 100%;
+    }
+}
